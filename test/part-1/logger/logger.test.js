@@ -1,4 +1,4 @@
-var simpleLogger = require("../../../src/part-1/simple-logger/simple-logger");
+var simpleLogger = require("../../../src/part-1/logger/logger");
 var expect = require("chai").expect;
 var assert = require("chai").assert;
 
