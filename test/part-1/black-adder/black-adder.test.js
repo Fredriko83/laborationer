@@ -1,6 +1,6 @@
 "use strict";
 
-var calc = require("../../../src/part-1/simple-calculator/simple-calculator");
+var calc = require("../../../src/part-1/black-adder/black-adder");
 var expect = require("chai").expect;
 
 describe("Test the module with kind values", function() {
