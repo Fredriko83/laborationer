@@ -4,16 +4,15 @@ var expect = require("chai").expect;
 describe("Test the function parse", function() {
     "use strict";
 
-    it("parse('http://lnu.se?key1=value1'); should return { key1: 'value1' }", function(done) {
+    it("parse('http://lnu.se?key1=value1&key2=value2'); should return { key1: \"value1\", key2: \"value2\" }", function(done) {
         var obj = { key1: "value1", key2: "value2" };
         expect(qsParser.parse("http://lnu.se?key1=value1&key2=value2")).to.eql(obj);
         done();
     });
 
-    it("parse('http://lnu.se?key1=value1&key2=value2&key3=value3&key4=value4'); " +
-        "should return { key1: 'value1', key2: 'value2', key3: 'value3', key4: 'value4' }", function(done) {
-        var obj = { key1: "value1", key2: "value2" };
-        expect(qsParser.parse("http://lnu.se?key1=value1&key2=value2")).to.eql(obj);
+    it("parse('http://lnu.se?key1=value1'); should return { key1: \"value1\"}", function(done) {
+        var obj = { key1: "value1"};
+        expect(qsParser.parse("http://lnu.se?key1=value1")).to.eql(obj);
         done();
     });
 
